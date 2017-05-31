@@ -1,0 +1,39 @@
+# Install package freetype-freeworld from RPMFusion
+sudo dnf install freetype-freeworld
+
+# Create file /etc/fonts/local.conf
+sudo tee -a /etc/fonts/local.conf <<-EOF
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+<match target="font">
+    <edit name="antialias" mode="assign">
+        <bool>true</bool>
+    </edit>
+    <edit name="autohint" mode="assign">
+        <bool>false</bool>
+    </edit>
+    <edit name="hinting" mode="assign">
+        <bool>true</bool>
+    </edit>
+    <edit name="hintstyle" mode="assign">
+        <const>hintslight</const>
+    </edit>
+    <edit name="lcdfilter" mode="assign">
+        <const>lcddefault</const>
+    </edit>
+    <edit name="rgba" mode="assign">
+        <const>rgb</const>
+    </edit>
+    <edit name="embeddedbitmap" mode="assign">
+        <bool>false</bool>
+    </edit>
+</match>
+</fontconfig>
+EOF
+# Logout from Gnome, log in tty and restart gdm
+sudo systemctl restart gdm.service
+
+or
+
+Reboot system
