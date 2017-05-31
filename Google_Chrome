@@ -1,0 +1,15 @@
+# Import key from Google
+sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
+
+# Create a repository file
+sudo tee -a << EOF > /etc/yum.repos.d/google-chrome.repo
+[google-chrome]
+name=google-chrome - \$basearch
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/\$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+EOF
+
+# Install package
+sudo dnf install google-chrome-stable
