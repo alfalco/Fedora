@@ -3,7 +3,7 @@ wget -c https://download3.vmware.com/software/view/viewclients/CART18FQ3/VMware-
 
 # Install ncurses libs, gtk libs and libpng12
 
-sudo dnf install ncurses-libs gtkmm24 gtkmm30 libpng12
+sudo dnf install ncurses-libs gtkmm24 gtkmm30 libpng12 python2
 
 # Make symbolic links
 
