@@ -2,10 +2,10 @@
 sudo rpm --import http://linux.teamviewer.com/pubkey/TeamViewer2017.asc
 
 # Create repository file
-sudo tee -a /etc/yum.repos.d/teamviewer.repo >> EOF
+sudo tee -a /etc/yum.repos.d/teamviewer.repo <<-EOF
 [teamviewer]
-name=TeamViewer - $basearch
-baseurl=http://linux.teamviewer.com/yum/stable/main/binary-$basearch/
+name=TeamViewer - \$basearch
+baseurl=http://linux.teamviewer.com/yum/stable/main/binary-\$basearch/
 gpgkey=http://linux.teamviewer.com/pubkey/TeamViewer2017.asc
 gpgcheck=1
 enabled=1
