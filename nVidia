@@ -1,0 +1,6 @@
+# For nVidia Prime, use Negativo17 repository
+
+sudo dnf config-manager --add-repo=http://negativo17.org/repos/fedora-nvidia.repo
+
+# And install the packages
+sudo dnf install nvidia-driver akmod-nvidia dkms-nvidia nvidia-settings kernel-devel nvidia-driver-libs.i686 vulkan.i686 cuda nvidia-driver-cuda cuda-devel nvidia-driver-NVML-devel
