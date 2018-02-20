@@ -3,5 +3,5 @@ $ sudo dnf check
 
 $ sudo dnf clean
 
-$ sudo dnf install irqbalance tmux screenfetch htop arc-theme gnome-tweak-tool chrome-gnome-shell vim-enhanced sqlite telegram-desktop
+$ sudo dnf install irqbalance lm_sensors tmux screenfetch htop arc-theme gnome-tweak-tool chrome-gnome-shell vim-enhanced sqlite telegram-desktop
 $ sudo systemctl enable --now irqbalance.service
