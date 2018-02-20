@@ -3,4 +3,4 @@ $ sudo dnf check
 
 $ sudo dnf clean
 
-$ sudo dnf install tmux screenfetch htop arc-theme gnome-tweak-tool chrome-gnome-shell vim-enhanced sqlite
+$ sudo dnf install tmux screenfetch htop arc-theme gnome-tweak-tool chrome-gnome-shell vim-enhanced sqlite telegram-desktop
