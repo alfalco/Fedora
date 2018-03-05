@@ -1,6 +1,11 @@
-#Check and clean system dnf
+#Configure DNF to use Fastest Mirror
 
-dnf config-manager --setopt fastestmirror="True" --save
+sudo dnf config-manager --setopt fastestmirror="True" --save
+
+#Install some packages
 
 sudo dnf install irqbalance lm_sensors tmux screenfetch htop arc-theme gnome-tweak-tool chrome-gnome-shell vim-enhanced sqlite telegram-desktop
+
+#Enable and start irqbalance
+
 sudo systemctl enable --now irqbalance.service
