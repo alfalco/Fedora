@@ -1,0 +1,11 @@
+#Install repository package
+
+sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+
+#Import GPG Key
+
+sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
+
+#Install Flash Plugin
+
+sudo dnf install flash-plugin
