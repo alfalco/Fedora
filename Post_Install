@@ -9,3 +9,8 @@ sudo dnf install irqbalance lm_sensors screenfetch neofetch htop arc-theme gnome
 #Enable and start irqbalance
 
 sudo systemctl enable --now irqbalance.service
+
+#Enable COPR and install Papirus icons
+
+sudo dnf copr enable dirkdavidis/papirus-icon-theme
+sudo dnf install papirus-icon-theme
