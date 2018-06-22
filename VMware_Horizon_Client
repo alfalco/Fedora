@@ -1,9 +1,14 @@
 # Download VMware Horizon Client Installer
+
 wget -c https://download3.vmware.com/software/view/viewclients/CART19FQ2/VMware-Horizon-Client-4.8.0-8518891.x64.bundle -P ~/Downloads/
 
 # Install ncurses libs, gtk libs and libpng12
 
 sudo dnf install ncurses-libs gtkmm24 gtkmm30 libpng12 python2
+
+# On Fedora 28
+
+sudo dnf install gtkmm24 libpng12
 
 # Make symbolic links
 
@@ -15,7 +20,8 @@ sudo ln -s libgstbase-1.0.so.0.1401.0 libgstbase-0.10.so.0
 sudo ln -s libgstreamer-1.0.so.0.1401.0 libgstreamer-0.10.so.0
 
 # Run installer
-sudo bash VMware-Horizon-Client-4.8.0-8518891.x64.bundle
+
+sudo bash ~/Downloads/VMware-Horizon-Client-4.8.0-8518891.x64.bundle
 
 References:
 
