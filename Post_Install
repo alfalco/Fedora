@@ -4,7 +4,7 @@ sudo dnf config-manager --setopt fastestmirror="True" --save
 
 #Install some packages
 
-sudo dnf install irqbalance lm_sensors screenfetch neofetch htop arc-theme gnome-tweak-tool chrome-gnome-shell vim-enhanced telegram-desktop pulseaudio-equalizer fuse-exfat exfat-utils
+sudo dnf install irqbalance lm_sensors screenfetch neofetch htop arc-theme gnome-tweak-tool chrome-gnome-shell vim-enhanced telegram-desktop pulseaudio-equalizer fuse-exfat exfat-utils python3-dnf-plugin-tracer
 
 #Enable and start irqbalance
 
