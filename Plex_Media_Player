@@ -1,0 +1,5 @@
+ Add Negativo17 repo to system
+sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.repo
+
+# Install package
+sudo dnf install plex-media-player
