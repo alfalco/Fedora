@@ -12,6 +12,8 @@ If you choose Fedora KDE Spin:
 
 sudo dnf install irqbalance lm_sensors screenfetch neofetch htop breeze-gtk vim-enhanced telegram-desktop pulseaudio-equalizer fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv
 
+sudo dnf install gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28 ffmpeg-libs
+
 #Enable and start irqbalance
 
 sudo systemctl enable --now irqbalance.service
