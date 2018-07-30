@@ -10,7 +10,7 @@ sudo dnf install irqbalance lm_sensors screenfetch neofetch htop arc-theme gnome
 
 If you choose Fedora KDE Spin:
 
-sudo dnf install irqbalance lm_sensors screenfetch neofetch htop breeze-gtk qqc2-desktop-style vim-enhanced telegram-desktop pulseaudio-equalizer fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28
+sudo dnf install irqbalance lm_sensors screenfetch neofetch htop breeze-gtk qqc2-desktop-style vim-enhanced telegram-desktop pulseaudio-equalizer fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28 git
 
 #Enable and start irqbalance
 
@@ -25,3 +25,20 @@ sudo dnf install papirus-icon-theme
 
 sudo dnf copr enable heliocastro/hack-fonts
 sudo dnf install hack-fonts
+
+#Compile Kvantum to apply theme with consistency
+
+Install dependencies:
+
+sudo dnf install gcc-c++ libX11-devel libXext-devel qt5-qtbase-devel qt5-qtsvg-devel qt5-qtx11extras-devel
+
+cd Downloads/
+git clone https://github.com/tsujan/Kvantum.git
+cd Kvantum/Kvantum/
+qmake-qt5 && make
+sudo make install
+make distclean 
+
+Theme Adapta KDE:
+
+wget -qO- https://raw.githubusercontent.com/PapirusDevelopmentTeam/adapta-kde/master/install.sh | sh
