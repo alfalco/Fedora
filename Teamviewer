@@ -17,3 +17,12 @@ sudo dnf --refresh install teamviewer
 
 # Check status of daemon
 systemctl status teamviewerd.service
+
+#Alternate method
+
+wget https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm -P ~/Downloads/
+
+sudo dnf install ~/Downloads/teamviewer.x86_64.rpm
+
+# Check status of daemon
+systemctl status teamviewerd.service
