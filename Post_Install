@@ -6,11 +6,11 @@ sudo dnf config-manager --setopt fastestmirror="True" --save
 
 If you choose Fedora Workstation:
 
-sudo dnf install irqbalance lm_sensors screenfetch neofetch htop arc-theme gnome-tweak-tool chrome-gnome-shell vim-enhanced telegram-desktop pulseaudio-equalizer fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28
+sudo dnf install irqbalance lm_sensors screenfetch neofetch htop arc-theme gnome-tweak-tool chrome-gnome-shell vim-enhanced telegram-desktop pulseaudio-equalizer fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28 sysfsutils
 
 If you choose Fedora KDE Spin:
 
-sudo dnf install irqbalance lm_sensors screenfetch neofetch htop breeze-gtk plasma-browser-integration qqc2-desktop-style vim-enhanced telegram-desktop pulseaudio-equalizer fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28 ffmpeg git adapta-gtk-theme
+sudo dnf install irqbalance lm_sensors screenfetch neofetch htop breeze-gtk plasma-browser-integration qqc2-desktop-style vim-enhanced telegram-desktop pulseaudio-equalizer fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28 ffmpeg git adapta-gtk-theme sysfsutils
 
 #Enable and start irqbalance
 
