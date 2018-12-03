@@ -1,6 +1,6 @@
 # Download VMware Horizon Client Installer
 
-wget -c https://download3.vmware.com/software/view/viewclients/CART19FQ2/VMware-Horizon-Client-4.8.0-8518891.x64.bundle -P ~/Downloads/
+wget -c https://download3.vmware.com/software/view/viewclients/CART19FQ3/VMware-Horizon-Client-4.9.0-9507999.x64.bundle -P ~/Downloads/
 
 # Install ncurses libs, gtk libs and libpng12
 
@@ -21,10 +21,10 @@ sudo ln -s libgstreamer-1.0.so.0.1404.0 libgstreamer-0.10.so.0
 
 # Run installer
 
-sudo bash ~/Downloads/VMware-Horizon-Client-4.8.0-8518891.x64.bundle
+sudo bash ~/Downloads/VMware-Horizon-Client-4.9.0-9507999.x64.bundle
 
 References:
 
-https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.8/rn/horizon-client-linux-48-release-notes.html
+https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.9/rn/horizon-client-linux-49-release-notes.html
 
-https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.8/horizon-client-linux-installation.pdf
+https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.9/horizon-client-linux-installation.pdf
