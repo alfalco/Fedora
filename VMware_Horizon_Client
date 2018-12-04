@@ -23,6 +23,19 @@ sudo ln -s libgstreamer-1.0.so.0.1404.0 libgstreamer-0.10.so.0
 
 sudo bash ~/Downloads/VMware-Horizon-Client-4.9.0-9507999.x64.bundle
 
+# Problem after installation
+
+$ vmware-view
+/usr/lib/vmware/view/bin/vmware-view-crtbora: symbol lookup error: /usr/lib64/libpangomm-1.4.so.1: undefined symbol: _ZN4Glib6ObjectC2EOS0_
+
+Workaround:
+
+$ LD_LIBRARY_PATH=/usr/lib/vmware /usr/lib/vmware/view/bin/vmware-view
+
+or
+
+$ ROLLBACK_VMWAREVIEW=1 vmware-view
+
 References:
 
 https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.9/rn/horizon-client-linux-49-release-notes.html
