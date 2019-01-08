@@ -1,0 +1,14 @@
+sudo dnf config-manager --setopt=install_weak_deps="False" --save
+
+sudo dnf install xorg-x11-server-Xorg xorg-x11-drv-evdev xorg-x11-drv-qxl gdm gnome-shell gnome-desktop gnome-terminal gnome-menus gnome-initial-setup dejavu-sans-mono-fonts dejavu-sans-fonts liberation-fonts nautilus nautilus-sendto desktop-backgrounds-gnome gnome-tweaks chrome-gnome-shell xdg-user-dirs-gtk xdg-utils neofetch arc-theme firefox tmux selinux-policy-minimum selinux-policy-mls zip unzip spice-vdagent
+
+# nmcli con add type wifi ifname WLAN con-name CONNECTION_NAME ssid SSID
+# nmcli con edit id CONNECTION_NAME
+nmcli> set ipv4.method auto
+nmcli> set 802-1x.eap peap
+nmcli> set 802-1x.phase2-auth mschapv2
+nmcli> set wifi-sec.key-mgmt wpa-eap
+nmcli> set 802-1x.identity USERNAME
+nmcli> set 802-1x.password PASSWORD
+nmcli> save
+nmcli> activate
