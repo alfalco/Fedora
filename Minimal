@@ -12,3 +12,11 @@ nmcli> set 802-1x.identity USERNAME
 nmcli> set 802-1x.password PASSWORD
 nmcli> save
 nmcli> activate
+
+localectl --no-convert set-keymap us us-acentos
+
+localectl --no-convert set-x11-keymap us us-acentos
+
+systemctl set-default graphical.target
+
+systemctl enable gdm.service
