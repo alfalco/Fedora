@@ -14,7 +14,7 @@ sudo dnf install ncurses-libs gtkmm24 gtkmm30 libpng12 python2
 
 # On Fedora 29
 
-sudo dnf install gtkmm24 libpng12
+sudo dnf install gtkmm24 libpng12 python2
 
 # Make symbolic links
 
