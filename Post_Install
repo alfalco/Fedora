@@ -27,7 +27,7 @@ sudo dnf install papirus-icon-theme
 
 #Enable COPR and install Hack Fonts
 
-sudo dnf copr enable heliocastro/hack-fonts
+sudo dnf copr enable zawertun/hack-fonts
 sudo dnf install hack-fonts
 
 #Compile Kvantum to apply theme with consistency
