@@ -4,9 +4,14 @@ http://www.vmware.com/go/viewclients
 
 # Download VMware Horizon Client Installer
 
+# 4.9.0
 wget -c https://download3.vmware.com/software/view/viewclients/CART19FQ3/VMware-Horizon-Client-4.9.0-9507999.x64.bundle -P ~/Downloads/
 
+# 4.10.0
 wget -c https://download3.vmware.com/software/view/viewclients/CART19FQ4/VMware-Horizon-Client-4.10.0-11053294.x64.bundle -P ~/Downloads/
+
+# 5.0.0
+wget -c https://download3.vmware.com/software/view/viewclients/CART20FQ1/VMware-Horizon-Client-5.0.0-12557422.x64.bundle -P ~/Downloads/
 
 # Install ncurses libs, gtk libs and libpng12
 
@@ -27,9 +32,15 @@ sudo ln -s libgstreamer-1.0.so.0.1404.0 libgstreamer-0.10.so.0
 
 # Run installer
 
+# 4.9.0
 sudo bash ~/Downloads/VMware-Horizon-Client-4.9.0-9507999.x64.bundle
 
+# 4.10.0
 sudo bash ~/Downloads/VMware-Horizon-Client-4.10.0-11053294.x64.bundle
+
+# 5.0.0
+sudo bash ~/Downloads/VMware-Horizon-Client-5.0.0-12557422.x64.bundle
+
 
 # Problem after installation
 
@@ -46,8 +57,15 @@ $ ROLLBACK_VMWAREVIEW=1 vmware-view
 
 References:
 
-https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.9/rn/horizon-client-linux-49-release-notes.html
-https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.10/rn/horizon-client-linux-410-release-notes.html
+# 4.9.0
 
+https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.9/rn/horizon-client-linux-49-release-notes.html
 https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.9/horizon-client-linux-installation.pdf
+
+# 4.10.0
+https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.10/rn/horizon-client-linux-410-release-notes.html
 https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.10/horizon-client-linux-installation.pdf
+
+# 5.0.0
+https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/5.0/rn/horizon-client-linux-50-release-notes.html
+https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/5.0/horizon-client-linux-installation.pdf
