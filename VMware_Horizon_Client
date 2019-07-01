@@ -24,11 +24,11 @@ sudo dnf install gtkmm24 libpng12 python2
 # Make symbolic links
 
 cd /usr/lib64
-sudo ln -s libudev.so.1.6.11 libudev.so.0
+sudo ln -s libudev.so.1.6.13 libudev.so.0
 sudo ln -s libffi.so.6.0.2 libffi.so.5
-sudo ln -s libgstapp-1.0.so.0.1404.0 libgstapp-0.10.so.0
-sudo ln -s libgstbase-1.0.so.0.1404.0 libgstbase-0.10.so.0
-sudo ln -s libgstreamer-1.0.so.0.1404.0 libgstreamer-0.10.so.0
+sudo ln -s libgstapp-1.0.so.0.1600.0 libgstapp-0.10.so.0
+sudo ln -s libgstbase-1.0.so.0.1600.0 libgstbase-0.10.so.0
+sudo ln -s libgstreamer-1.0.so.0.1600.0 libgstreamer-0.10.so.0
 
 # Run installer
 
