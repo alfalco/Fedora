@@ -21,6 +21,10 @@ sudo dnf install ncurses-libs gtkmm24 gtkmm30 libpng12 python2
 
 sudo dnf install gtkmm24 libpng12 python2
 
+# Check versions
+
+ls -al lib{udev,ffi,gstapp,gstbase,gstreamer}*.so*
+
 # Make symbolic links
 
 cd /usr/lib64
