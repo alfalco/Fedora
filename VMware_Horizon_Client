@@ -45,6 +45,17 @@ sudo bash ~/Downloads/VMware-Horizon-Client-4.10.0-11053294.x64.bundle
 # 5.0.0
 sudo bash ~/Downloads/VMware-Horizon-Client-5.0.0-12557422.x64.bundle
 
+sudo env TERM=dumb VMWARE_EULAS_AGREED=yes \
+bash ~/Downloads/VMware-Horizon-Client-5.0.0-12557422.x64.bundle --console \
+--set-setting vmware-horizon-usb usbEnable no \
+--set-setting vmware-horizon-virtual-printing tpEnable no \
+--set-setting vmware-horizon-smartcard smartcardEnable no \
+--set-setting vmware-horizon-rtav rtavEnable no \
+--set-setting vmware-horizon-tsdr tsdrEnable no \
+--set-setting vmware-horizon-scannerclient scannerEnable no \
+--set-setting vmware-horizon-serialportclient serialportEnable no \
+--set-setting vmware-horizon-mmr mmrEnable no \
+--set-setting vmware-horizon-media-provider mediaproviderEnable no
 
 # Problem after installation
 
