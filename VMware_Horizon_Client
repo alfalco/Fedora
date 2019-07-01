@@ -15,7 +15,7 @@ wget -c https://download3.vmware.com/software/view/viewclients/CART20FQ1/VMware-
 
 # Install ncurses libs, gtk libs and libpng12
 
-sudo dnf install ncurses-libs gtkmm24 gtkmm30 libpng12 python2
+sudo dnf install ncurses-libs gtkmm24 gtkmm30 libpng12 python2 pygtk2
 
 # On Fedora 29
 
