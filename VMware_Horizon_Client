@@ -70,6 +70,11 @@ or
 
 $ ROLLBACK_VMWAREVIEW=1 vmware-view
 
+#Make it permanent
+
+$ sudo sed -i 's|vmware-view %u|env ROLLBACK_VMWAREVIEW=1 &|' /usr/share/applications/vmware-view.desktop
+$ sudo update-desktop-database
+
 References:
 
 # 4.9.0
