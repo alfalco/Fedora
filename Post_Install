@@ -6,7 +6,7 @@ sudo dnf config-manager --setopt fastestmirror="True" --save
 
 If you choose Fedora Workstation:
 
-sudo dnf install irqbalance lm_sensors screenfetch neofetch htop arc-theme gnome-tweak-tool chrome-gnome-shell vim-enhanced telegram-desktop pulseaudio-equalizer fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28 sysfsutils
+sudo dnf install irqbalance lm_sensors screenfetch neofetch htop arc-theme gnome-tweak-tool chrome-gnome-shell vim-enhanced telegram-desktop fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28 sysfsutils iptraf-ng nethogs
 
 If you choose Fedora KDE Spin:
 
