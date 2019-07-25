@@ -30,4 +30,4 @@ $ gsettings set org.gnome.mutter workspaces-only-on-primary false
 
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-sudo dnf install irqbalance lm_sensors htop vim-enhanced telegram-desktop fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28 sysfsutils iptraf-ng nethogs mtr dnstop ncdu initscripts
+sudo dnf install irqbalance lm_sensors htop vim-enhanced telegram-desktop fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28 sysfsutils iptraf-ng nethogs mtr dnstop ncdu initscripts fedora-user-agent-chrome
