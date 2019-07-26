@@ -2,7 +2,7 @@
 sudo dnf config-manager --setopt=install_weak_deps="False" --save
 #
 
-sudo dnf install bash-completion pciutils xorg-x11-server-Xorg xorg-x11-drv-evdev xorg-x11-drv-qxl gdm gnome-shell gnome-desktop gnome-terminal gnome-menus gnome-initial-setup dejavu-sans-mono-fonts dejavu-sans-fonts liberation-fonts google-noto-sans-fonts google-noto-serif-fonts nautilus nautilus-sendto desktop-backgrounds-gnome gnome-tweaks chrome-gnome-shell xdg-user-dirs-gtk xdg-utils neofetch arc-theme firefox tmux selinux-policy-minimum selinux-policy-mls zip unzip NetworkManager-wifi iwl6000g2a-firmware spice-vdagent
+sudo dnf install bash-completion pciutils xorg-x11-server-Xorg xorg-x11-drv-evdev xorg-x11-drv-qxl gdm gnome-shell gnome-desktop gnome-terminal gnome-menus gnome-initial-setup dejavu-sans-mono-fonts dejavu-sans-fonts liberation-fonts google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-fonts google-noto-serif-fonts nautilus nautilus-sendto desktop-backgrounds-gnome gnome-tweaks chrome-gnome-shell xdg-user-dirs-gtk xdg-utils neofetch arc-theme firefox tmux selinux-policy-minimum selinux-policy-mls zip unzip NetworkManager-wifi iwl6000g2a-firmware spice-vdagent
 
 $ nmcli con add type wifi ifname WLAN con-name CONNECTION_NAME ssid SSID
 $ nmcli con edit id CONNECTION_NAME
