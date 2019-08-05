@@ -13,6 +13,9 @@ wget -c https://download3.vmware.com/software/view/viewclients/CART19FQ4/VMware-
 # 5.0.0
 wget -c https://download3.vmware.com/software/view/viewclients/CART20FQ1/VMware-Horizon-Client-5.0.0-12557422.x64.bundle -P ~/Downloads/
 
+# 5.1.0
+wget -c https://download3.vmware.com/software/view/viewclients/CART20FQ2/VMware-Horizon-Client-5.1.0-13956721.x64.bundle -P ~/Downloads/
+
 # Install ncurses libs, gtk libs and libpng12
 
 sudo dnf install ncurses-libs gtkmm24 gtkmm30 libpng12 python2 pygtk2
@@ -49,8 +52,11 @@ sudo bash ~/Downloads/VMware-Horizon-Client-4.10.0-11053294.x64.bundle
 # 5.0.0
 sudo bash ~/Downloads/VMware-Horizon-Client-5.0.0-12557422.x64.bundle
 
+# 5.1.0
+sudo bash ~/Downloads/VMware-Horizon-Client-5.1.0-13956721.x64.bundle
+
 sudo env TERM=dumb VMWARE_EULAS_AGREED=yes \
-bash ~/Downloads/VMware-Horizon-Client-5.0.0-12557422.x64.bundle --console \
+bash ~/Downloads/VMware-Horizon-Client-5.1.0-13956721.x64.bundle --console \
 --set-setting vmware-horizon-usb usbEnable no \
 --set-setting vmware-horizon-virtual-printing tpEnable no \
 --set-setting vmware-horizon-smartcard smartcardEnable no \
@@ -93,3 +99,7 @@ https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.10/horizon-client-l
 # 5.0.0
 https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/5.0/rn/horizon-client-linux-50-release-notes.html
 https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/5.0/horizon-client-linux-installation.pdf
+
+# 5.1.0
+https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/5.1/rn/horizon-client-linux-51-release-notes.html
+https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/5.1/horizon-client-linux-installation.pdf
