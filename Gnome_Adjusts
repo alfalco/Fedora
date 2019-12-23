@@ -1,0 +1,54 @@
+Adjusts
+
+gsettings set org.gnome.shell.app-switcher current-workspace-only 'true'
+
+gsettings set org.gnome.mutter workspaces-only-on-primary 'false'
+
+gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
+
+gsettings set org.gnome.Terminal.Legacy.Settings menu-accelerator-enabled 'false'
+
+gsettings get org.gnome.Terminal.ProfilesList default
+
+gsettings set org.gnome.Terminal.Legacy.Profile:/:0/ bold-is-bright 'true'
+
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ bold-is-bright 'true'
+
+gsettings set org.gnome.gedit.preferences.editor scheme 'cobalt'
+
+gsettings set org.gnome.gedit.preferences.editor scheme 'oblivion'
+
+
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ use-system-font false
+
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ font 'Hack Regular 9'
+
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ palette '['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']'
+
+# displays what this setting represents
+gsettings describe org.gnome.desktop.peripherals.mouse accel-profile
+
+# displays the values it accepts as input
+gsettings range org.gnome.desktop.peripherals.mouse accel-profile
+
+# sets the accelleration profile to 'flat'
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
+
+gsettings set org.gnome.desktop.peripherals.mouse speed 0.25
+
+gsettings set org.gnome.mutter experimental-features '["rt-scheduler"]'
+
+
+gsettings set org.gnome.shell enabled-extensions "['user-theme@gnome-shell-extensions.gcampax.github.com', 'TopIcons@phocean.net', 'dash-to-dock@micxgx.gmail.com']"
+
+gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+gsettings set org.gnome.shell.extensions.user-theme name 'Arc-Dark'
+gsettings set org.gnome.desktop.interface document-font-name 'Cantarell 9'
+gsettings set org.gnome.desktop.interface font-name 'Cantarell 9'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Source Code Pro 9'
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Cantarell Bold 9'
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ use-system-font false
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ font 'Hack Regular 9'
+
+pactl set-sink-volume @DEFAULT_SINK@ 25%
