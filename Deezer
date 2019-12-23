@@ -1,0 +1,59 @@
+#sudo npm install -g electron@6.1.5 asar prettier --unsafe-perm=true --allow-root
+cd ~/Downloads/
+rm -rf deezer/
+git clone https://github.com/SibrenVasse/deezer.git
+git clone https://aur.archlinux.org/deezer.git
+wget -c https://aur.archlinux.org/cgit/aur.git/snapshot/deezer.tar.gz
+tar xzvf deezer.tar.gz
+cd deezer/
+# Get binaries from Deezer
+wget --content-disposition https://www.deezer.com/desktop/download/artifact/win32/x86/4.18.11
+
+# Extract app from installer
+7z x -so DeezerDesktopSetup_*.exe "\$PLUGINSDIR/app-32.7z" > app-32.7z
+
+# Extract app archive
+7z x -y -bsp0 -bso0 app-32.7z
+
+# Extract png from ico container
+convert resources/win/app.ico resources/win/deezer.png
+
+rm -r resources/{app,npm_temp} || true
+
+asar extract resources/app.asar resources/app
+
+# Remove NodeRT from package (-205.72 MiB)
+rm -r resources/app/node_modules/@nodert
+
+mkdir npm_temp; cd npm_temp
+sudo npm install  --prefix ./ mpris-service
+cp -r node_modules/* ../resources/app/node_modules/
+cd ..
+
+prettier --write resources/app/"build/*.js"
+prettier --write resources/app/"build/assets/cache/js/route-naboo*ads*.js"
+
+patch -dresources/app/ -p1 < systray.patch
+patch -dresources/app/ -p1 < menu-bar.patch
+patch -dresources/app/ -p1 < nav-buttons.patch
+patch -dresources/app/ -p1 < 0001-MPRIS-interface.patch
+
+asar pack resources/app resources/app.asar
+
+sudo mkdir -p /usr/share/deezer
+sudo mkdir -p /usr/lib/node_modules/share/
+sudo ln -sf /usr/share/deezer/ /usr/lib/node_modules/share/
+
+tee -a deezer <<-EOF
+#!/bin/sh
+exec electron /usr/share/deezer/app.asar "\$@"
+EOF
+
+sudo install -Dm644 resources/app.asar /usr/share/deezer/
+sudo install -Dm644 resources/win/deezer.png /usr/share/icons/hicolor/256x256/apps/
+sudo install -Dm644 resources/win/systray.png /usr/share/deezer/
+sed -i 's|/usr/bin/deezer %u|env XDG_CURRENT_DESKTOP=GNOME &|' deezer.desktop
+sudo install -Dm644 deezer.desktop /usr/share/applications/
+sudo install -Dm755 deezer /usr/bin/
+
+sudo update-desktop-database
