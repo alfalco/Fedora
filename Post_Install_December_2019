@@ -28,20 +28,13 @@ sudo dnf install flash-plugin
 
 sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
 
-sudo tee -a /etc/yum.repos.d/google-chrome.repo <<-EOF
-[google-chrome]
-name=google-chrome - \$basearch
-baseurl=http://dl.google.com/linux/chrome/rpm/stable/\$basearch
-enabled=1
-gpgcheck=1
-gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
-EOF
+sudo dnf config-manager --add-repo http://dl.google.com/linux/chrome/rpm/stable/x86_64/
 
 sudo dnf install google-chrome-stable
 
-sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
-
 sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
 
 sudo dnf install brave-browser
 
