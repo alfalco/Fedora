@@ -1,0 +1,103 @@
+sudo dnf check
+
+sudo dnf --best --allowerasing --refresh upgrade
+
+sudo dnf install grubby patch p7zip-plugins gcc-c++ npm ImageMagick irqbalance lm_sensors htop vim-enhanced fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv unrar sysfsutils iptraf-ng nethogs dnstop ncdu gnome-tweaks screenfetch neofetch smartmontools bonnie++ fio liberation-fonts google-noto-serif-fonts gtkmm24 libpng12 python2 pygtk2 telegram-desktop gnome-shell-extension-dash-to-dock gnome-shell-extension-topicons-plus
+
+sudo dnf install @virtualization
+
+sudo usermod -a -G libvirt $USER
+
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+sudo dnf install @multimedia compat-ffmpeg28 ffmpeg libva-utils pulseeffects
+
+sudo dnf copr enable zawertun/hack-fonts
+
+sudo dnf install hack-fonts
+
+sudo dnf copr enable dirkdavidis/papirus-icon-theme
+
+sudo dnf install papirus-icon-theme
+
+sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+
+sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
+
+sudo dnf install flash-plugin
+
+sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
+
+sudo tee -a /etc/yum.repos.d/google-chrome.repo <<-EOF
+[google-chrome]
+name=google-chrome - \$basearch
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/\$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+EOF
+
+sudo dnf install google-chrome-stable
+
+flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+sudo grubby --update-kernel=ALL --remove-args="quiet"
+sudo grubby --update-kernel=ALL --args="intel_iommu=on mitigations=off quiet"
+sudo grubby --info=ALL
+
+gsettings set org.gnome.shell.app-switcher current-workspace-only 'true'
+gsettings set org.gnome.mutter workspaces-only-on-primary 'false'
+gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
+
+wget -c https://download3.vmware.com/software/view/viewclients/CART20FQ4/VMware-Horizon-Client-5.3.0-15208949.x64.bundle -P ~/Downloads/
+
+# Check versions
+
+ls -al /usr/lib64/lib{udev,ffi,gstapp,gstbase,gstreamer}*.so*
+
+# Make symbolic links
+
+cd /usr/lib64
+sudo ln -s libudev.so.1.6.15 libudev.so.0
+sudo ln -s libgstapp-1.0.so.0.1601.0 libgstapp-0.10.so.0
+sudo ln -s libgstbase-1.0.so.0.1601.0 libgstbase-0.10.so.0
+sudo ln -s libgstreamer-1.0.so.0.1601.0 libgstreamer-0.10.so.0
+
+sudo env TERM=dumb VMWARE_EULAS_AGREED=yes \
+bash ~/Downloads/VMware-Horizon-Client-5.3.0-15208949.x64.bundle --console \
+--set-setting vmware-horizon-html5mmr html5mmrEnable no \
+--set-setting vmware-horizon-integrated-printing vmipEnable no \
+--set-setting vmware-horizon-media-provider mediaproviderEnable no \
+--set-setting vmware-horizon-mmr mmrEnable no \
+--set-setting vmware-horizon-rtav rtavEnable no \
+--set-setting vmware-horizon-scannerclient scannerEnable no \
+--set-setting vmware-horizon-serialportclient serialportEnable no \
+--set-setting vmware-horizon-smartcard smartcardEnable no \
+--set-setting vmware-horizon-tsdr tsdrEnable no \
+--set-setting vmware-horizon-usb usbEnable no \
+--set-setting vmware-horizon-virtual-printing tpEnable no
+
+sudo update-desktop-database
+
+# Arc Theme
+
+sudo dnf install autoconf automake sassc optipng inkscape gtk3-devel gtk-murrine-engine
+
+cd ~/Downloads; git clone https://github.com/arc-design/arc-theme --depth 1; cd arc-theme
+
+./autogen.sh --prefix=/usr
+
+sudo make install
+
+sudo systemctl enable --now sshd
+
+sudo tee -a /etc/yum.repos.d/AnyDesk-Fedora.repo <<-EOF
+[anydesk]
+name=AnyDesk Fedora - stable
+baseurl=http://rpm.anydesk.com/fedora/\$basearch/
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://keys.anydesk.com/repos/RPM-GPG-KEY
+EOF
+
+sudo dnf install anydesk
