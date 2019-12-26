@@ -51,4 +51,13 @@ gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Cantarell Bold 9'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ use-system-font false
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ font 'Hack Regular 9'
 
+#Change wallpaper
+
+#Examples
+#gsettings set org.gnome.desktop.background picture-uri $URI
+#gsettings set org.gnome.desktop.screensaver picture-uri $URI
+
+gsettings set org.gnome.desktop.background picture-uri 'file:///home/alfalco/Pictures/Wallpapers/Space_Blue.jpg'
+gsettings set org.gnome.desktop.screensaver picture-uri 'file:///home/alfalco/Pictures/Wallpapers/Space_Blue.jpg'
+
 pactl set-sink-volume @DEFAULT_SINK@ 25%
