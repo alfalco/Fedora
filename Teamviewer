@@ -26,3 +26,20 @@ sudo dnf install ~/Downloads/teamviewer.x86_64.rpm
 
 # Check status of daemon
 systemctl status teamviewerd.service
+
+#Fedora 31
+
+sudo dnf install qt5-qtlocation qt5-qtquickcontrols qt5-qtsensors qt5-qtwebchannel qt5-qtwebkit
+
+wget https://dl.teamviewer.com/download/linux/version_15x/teamviewer_15.1.3937_amd64.tar.xz -P ~/Downloads/
+
+or
+
+wget https://download.teamviewer.com/download/linux/teamviewer_amd64.tar.xz -P ~/Downloads/
+
+cd Downloads/
+
+tar xvf teamviewer_15.1.3937_amd64.tar.xz 
+cd teamviewer/
+sudo ./tv-setup checklibs
+sudo ./tv-setup install force
