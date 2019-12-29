@@ -1,11 +1,10 @@
 #sudo npm install -g electron@6.1.5 asar prettier --unsafe-perm=true --allow-root
+
 cd ~/Downloads/
 rm -rf deezer/
 git clone https://github.com/SibrenVasse/deezer.git
-git clone https://aur.archlinux.org/deezer.git
-wget -c https://aur.archlinux.org/cgit/aur.git/snapshot/deezer.tar.gz
-tar xzvf deezer.tar.gz
 cd deezer/
+
 # Get binaries from Deezer
 wget --content-disposition https://www.deezer.com/desktop/download/artifact/win32/x86/4.18.11
 
