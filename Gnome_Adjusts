@@ -51,6 +51,13 @@ gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Cantarell Bold 9'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ use-system-font false
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ font 'Hack Regular 9'
 
+#Topicons Plus
+
+gsettings set org.gnome.shell.extensions.topicons icon-opacity '255'
+gsettings set org.gnome.shell.extensions.topicons icon-size '20'
+gsettings set org.gnome.shell.extensions.topicons tray-pos 'right'
+gsettings set org.gnome.shell.extensions.topicons icon-spacing '10'
+
 #Change wallpaper
 
 #Examples
