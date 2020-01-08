@@ -38,6 +38,7 @@ gsettings set org.gnome.desktop.peripherals.mouse speed 0.25
 
 gsettings set org.gnome.mutter experimental-features '["rt-scheduler"]'
 
+gsettings set org.gnome.mutter experimental-features "['rt-scheduler' , 'scale-monitor-framebuffer']"
 
 gsettings set org.gnome.shell enabled-extensions "['user-theme@gnome-shell-extensions.gcampax.github.com', 'TopIcons@phocean.net', 'dash-to-dock@micxgx.gmail.com']"
 
