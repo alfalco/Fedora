@@ -12,7 +12,7 @@ sudo usermod -a -G libvirt $USER
 
 sudo systemctl enable --now cockpit.socket
 
-sudo dnf install @multimedia compat-ffmpeg28 ffmpeg libva-utils pulseeffects
+sudo dnf install @multimedia compat-ffmpeg28 ffmpeg libva-utils pulseeffects youtube-dl
 
 sudo dnf copr enable zawertun/hack-fonts
 
