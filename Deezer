@@ -1,4 +1,4 @@
-#sudo npm install -g electron@6.1.5 asar prettier --unsafe-perm=true --allow-root
+#sudo npm install -g electron@6.1.7 asar prettier --unsafe-perm=true --allow-root
 
 cd ~/Downloads/
 rm -rf deezer/
@@ -6,7 +6,7 @@ git clone https://github.com/SibrenVasse/deezer.git
 cd deezer/
 
 # Get binaries from Deezer
-wget --content-disposition https://www.deezer.com/desktop/download/artifact/win32/x86/4.18.11
+wget --content-disposition https://www.deezer.com/desktop/download/artifact/win32/x86/4.18.40
 
 # Extract app from installer
 7z x -so DeezerDesktopSetup_*.exe "\$PLUGINSDIR/app-32.7z" > app-32.7z
