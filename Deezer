@@ -56,4 +56,6 @@ sed -i 's|/usr/bin/deezer %u|env XDG_CURRENT_DESKTOP=GNOME &|' deezer.desktop
 sudo install -Dm644 deezer.desktop /usr/share/applications/
 sudo install -Dm755 deezer /usr/bin/
 
+rm -rf ~/.config/deezer-desktop/
+
 sudo update-desktop-database
