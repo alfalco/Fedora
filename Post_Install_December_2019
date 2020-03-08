@@ -92,6 +92,8 @@ sudo make install
 
 sudo systemctl enable --now sshd
 
+sudo systemctl disable --now abrt-journal-core.service abrt-oops.service abrt-xorg.service abrtd.service
+
 sudo tee -a /etc/yum.repos.d/AnyDesk-Fedora.repo <<-EOF
 [anydesk]
 name=AnyDesk Fedora - stable
