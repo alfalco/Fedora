@@ -68,4 +68,7 @@ gsettings set org.gnome.shell.extensions.topicons icon-spacing '10'
 gsettings set org.gnome.desktop.background picture-uri 'file:///home/alfalco/Pictures/Wallpapers/Space_Blue.jpg'
 gsettings set org.gnome.desktop.screensaver picture-uri 'file:///home/alfalco/Pictures/Wallpapers/Space_Blue.jpg'
 
+gsettings set org.gnome.software download-updates-notify false
+gsettings set org.gnome.software download-updates false
+
 pactl set-sink-volume @DEFAULT_SINK@ 25%
