@@ -1,0 +1,25 @@
+tee -a ~/.config/pulse/daemon.conf <<-EOF
+default-sample-format = float32le
+default-sample-rate = 48000
+alternate-sample-rate = 44100
+default-sample-channels = 2
+default-channel-map = front-left,front-right
+default-fragments = 2
+default-fragment-size-msec = 125
+resample-method = soxr-vhq
+enable-lfe-remixing = no
+high-priority = yes
+nice-level = -15
+realtime-scheduling = yes
+realtime-priority = 9
+rlimit-rtprio = 9
+daemonize = no
+EOF
+
+sudo tee -a /etc/asound.conf <<-EOF
+# Use PulseAudio plugin hw
+pcm.!default {
+   type plug
+   slave.pcm hw
+}
+EOF
