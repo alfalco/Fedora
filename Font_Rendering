@@ -1,39 +1,26 @@
-# Install package freetype-freeworld from RPMFusion
-sudo dnf install freetype-freeworld.i686 freetype-freeworld.x86_64
+.Xresources
 
-# Create file /etc/fonts/local.conf
-sudo tee -a /etc/fonts/local.conf <<-EOF
-<?xml version='1.0'?>
-<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
-<fontconfig>
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+/etc/fonts/local.conf
+
 <match target="font">
-    <edit name="antialias" mode="assign">
-        <bool>true</bool>
-    </edit>
-    <edit name="autohint" mode="assign">
-        <bool>false</bool>
-    </edit>
-    <edit name="hinting" mode="assign">
-        <bool>true</bool>
-    </edit>
-    <edit name="hintstyle" mode="assign">
-        <const>hintslight</const>
-    </edit>
-    <edit name="lcdfilter" mode="assign">
-        <const>lcddefault</const>
-    </edit>
-    <edit name="rgba" mode="assign">
-        <const>rgb</const>
-    </edit>
-    <edit name="embeddedbitmap" mode="assign">
-        <bool>false</bool>
-    </edit>
+  <edit name="autohint" mode="assign">
+    <bool>true</bool>
+  </edit>
+  <edit name="hinting" mode="assign">
+    <bool>true</bool>
+  </edit>
+  <edit mode="assign" name="hintstyle">
+    <const>hintslight</const>
+  </edit>
+  <edit mode="assign" name="lcdfilter">
+   <const>lcddefault</const>
+ </edit>
 </match>
-</fontconfig>
-EOF
-# Logout from Gnome, log in tty and restart gdm
-sudo systemctl restart gdm.service
-
-or
-
-Reboot system
