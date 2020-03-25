@@ -12,6 +12,8 @@ sudo usermod -a -G libvirt $USER
 
 sudo systemctl enable --now cockpit.socket
 
+sudo systemctl enable --now sshd
+
 sudo dnf install @multimedia compat-ffmpeg28 ffmpeg libva-utils pulseeffects youtube-dl
 
 sudo dnf copr enable zawertun/hack-fonts
@@ -89,8 +91,6 @@ cd ~/Downloads; git clone https://github.com/arc-design/arc-theme --depth 1; cd 
 ./autogen.sh --prefix=/usr
 
 sudo make install
-
-sudo systemctl enable --now sshd
 
 sudo systemctl disable --now abrt-journal-core.service abrt-oops.service abrt-xorg.service abrtd.service
 
