@@ -1,0 +1,14 @@
+cat << EOF | sudo tee -a /etc/sysctl.d/99-sysctl.conf
+vm.dirty_ratio = 10
+vm.dirty_background_ratio = 5
+vm.dirty_expire_centisecs = 2000
+vm.dirty_writeback_centisecs = 1000
+vm.swappiness = 10
+vm.vfs_cache_pressure = 50
+
+net.ipv4.ip_forward = 1
+net.ipv4.tcp_dsack = 0
+net.ipv4.tcp_sack = 0
+kernel.sched_migration_cost_ns = 5000000
+kernel.sched_autogroup_enabled = 0
+EOF
