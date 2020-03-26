@@ -84,7 +84,7 @@ sudo update-desktop-database
 
 # Arc Theme
 
-sudo dnf install autoconf automake sassc optipng inkscape gtk3-devel gtk-murrine-engine
+sudo dnf install autoconf automake sassc optipng inkscape-0.92.4-8.fc31 gtk3-devel gtk-murrine-engine
 
 cd ~/Downloads; git clone https://github.com/arc-design/arc-theme --depth 1; cd arc-theme
 
