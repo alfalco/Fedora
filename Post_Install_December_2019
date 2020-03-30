@@ -64,7 +64,7 @@ wget -c https://download3.vmware.com/software/view/viewclients/CART21FQ1/VMware-
 
 # Check versions
 
-ls -al /usr/lib64/lib{udev,ffi,gstapp,gstbase,gstreamer}*.so*
+ls -alt /usr/lib64/lib{udev,ffi,gstapp,gstbase,gstreamer}*.so*
 
 # Make symbolic links
 
