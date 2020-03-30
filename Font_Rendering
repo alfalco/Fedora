@@ -1,4 +1,4 @@
-.Xresources
+tee -a ~/.Xresources <<-EOF
 
 Xft.dpi: 96
 Xft.antialias: true
@@ -7,8 +7,9 @@ Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
+EOF
 
-/etc/fonts/local.conf
+sudo tee -a /etc/fonts/local.conf <<-EOF
 
 <match target="font">
   <edit name="autohint" mode="assign">
@@ -24,3 +25,4 @@ Xft.lcdfilter: lcddefault
    <const>lcddefault</const>
  </edit>
 </match>
+EOF
