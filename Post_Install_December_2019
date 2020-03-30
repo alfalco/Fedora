@@ -74,6 +74,12 @@ sudo ln -s libgstapp-1.0.so.0.1602.0 libgstapp-0.10.so.0
 sudo ln -s libgstbase-1.0.so.0.1602.0 libgstbase-0.10.so.0
 sudo ln -s libgstreamer-1.0.so.0.1602.0 libgstreamer-0.10.so.0
 
+# Check symbolic links
+
+ls -al /usr/lib64/lib{udev,ffi,gstapp,gstbase,gstreamer}*.so*
+
+# Install VMware Horizon Client
+
 sudo env TERM=dumb VMWARE_EULAS_AGREED=yes \
 bash ~/Downloads/VMware-Horizon-Client-5.4.0-15805449.x64.bundle --console \
 --set-setting vmware-horizon-html5mmr html5mmrEnable no \
@@ -93,6 +99,8 @@ sudo update-desktop-database
 # Arc Theme
 
 sudo dnf install autoconf automake make sassc optipng inkscape-0.92.4-8.fc31 gtk3-devel gtk-murrine-engine
+
+sudo dnf versionlock add inkscape-0.92.4-8.fc31
 
 cd ~/Downloads; git clone https://github.com/arc-design/arc-theme --depth 1; cd arc-theme
 
