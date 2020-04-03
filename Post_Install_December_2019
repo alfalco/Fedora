@@ -112,6 +112,8 @@ sudo systemctl disable --now abrt-journal-core.service abrt-oops.service abrt-xo
 
 sudo systemctl disable --now dnf-makecache.timer
 
+sudo systemctl mask packagekit.service
+
 sudo tee -a /etc/yum.repos.d/AnyDesk-Fedora.repo <<-EOF
 [anydesk]
 name=AnyDesk Fedora - stable
