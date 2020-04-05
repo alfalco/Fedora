@@ -71,4 +71,16 @@ gsettings set org.gnome.desktop.screensaver picture-uri 'file:///home/alfalco/Pi
 gsettings set org.gnome.software download-updates-notify false
 gsettings set org.gnome.software download-updates false
 
+# GNOME Screen Record
+
+Ctrl + Alt + Shift + R - To start/stop
+
+# Increase the duration of screen recording
+
+gsettings set org.gnome.settings-daemon.plugins.media-keys max-screencast-length 60
+
+Replace the ’60’ value with the length you want in seconds, e.g., 300 for 5 minutes, 600 for 10 minutes, and so on.
+
+If you set the value to ‘0’ there will be no time limit.
+
 pactl set-sink-volume @DEFAULT_SINK@ 25%
