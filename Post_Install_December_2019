@@ -1,3 +1,5 @@
+sudo hostnamectl set-hostname zeus --static
+
 sudo dnf check
 
 sudo dnf --best --allowerasing --refresh upgrade
