@@ -88,3 +88,8 @@ Replace the ’60’ value with the length you want in seconds, e.g., 300 for 5 
 If you set the value to ‘0’ there will be no time limit.
 
 pactl set-sink-volume @DEFAULT_SINK@ 25%
+
+tee -a .bashrc <<-EOF
+# Enforce X11/XWayland for Qt Apps
+export QT_QPA_PLATFORM="xcb"
+EOF
