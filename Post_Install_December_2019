@@ -2,9 +2,9 @@ sudo hostnamectl set-hostname zeus --static
 
 sudo dnf check
 
-sudo dnf --best --allowerasing --refresh upgrade
-
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+sudo dnf --best --allowerasing --refresh upgrade
 
 sudo dnf install grubby patch p7zip-plugins gcc-c++ npm ImageMagick irqbalance lm_sensors htop vim-enhanced fuse-exfat exfat-utils python3-dnf-plugin-tracer python3-dnf-plugin-versionlock icedtea-web nmap pv unrar sysfsutils iptraf-ng nethogs dnstop ncdu gnome-tweaks screenfetch neofetch smartmontools bonnie++ fio dbus-x11 hdparm util-linux-user finger liberation-fonts google-noto-serif-fonts gtkmm24 libpng12 python2 pygtk2 telegram-desktop gnome-shell-extension-dash-to-dock gnome-shell-extension-topicons-plus xorg-x11-drv-amdgpu remmina
 
