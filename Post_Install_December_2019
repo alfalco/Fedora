@@ -6,7 +6,7 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 
 sudo dnf --best --allowerasing --refresh upgrade
 
-sudo dnf install grubby patch p7zip-plugins gcc-c++ npm ImageMagick irqbalance lm_sensors htop vim-enhanced fuse-exfat exfat-utils python3-dnf-plugin-tracer python3-dnf-plugin-versionlock icedtea-web nmap pv unrar sysfsutils iptraf-ng nethogs dnstop ncdu gnome-tweaks screenfetch neofetch smartmontools bonnie++ fio dbus-x11 hdparm util-linux-user finger liberation-fonts google-noto-serif-fonts gtkmm24 libpng12 python2 pygtk2 telegram-desktop gnome-shell-extension-dash-to-dock gnome-shell-extension-topicons-plus xorg-x11-drv-amdgpu remmina
+sudo dnf install grubby patch p7zip-plugins gcc-c++ npm ImageMagick irqbalance lm_sensors htop vim-enhanced fuse-exfat exfat-utils python3-dnf-plugin-tracer python3-dnf-plugin-versionlock icedtea-web nmap pv unrar sysfsutils iptraf-ng nethogs dnstop ncdu gnome-tweaks screenfetch neofetch smartmontools bonnie++ fio dbus-x11 hdparm util-linux-user finger liberation-fonts google-noto-serif-fonts gtkmm24 libpng12 python2 pygtk2 telegram-desktop gnome-shell-extension-dash-to-dock gnome-shell-extension-topicons-plus xorg-x11-drv-amdgpu remmina most
 
 sudo dnf install @virtualization tuned tuned-utils ksmtuned cockpit cockpit-machines
 
@@ -111,6 +111,10 @@ sudo systemctl disable --now abrt-journal-core.service abrt-oops.service abrt-xo
 sudo systemctl disable --now dnf-makecache.timer
 
 sudo systemctl mask packagekit.service
+
+sudo tee -a /etc/profile.d/most.sh <<-EOF
+export PAGER="/usr/bin/most -s"
+EOF
 
 sudo tee -a /etc/yum.repos.d/AnyDesk-Fedora.repo <<-EOF
 [anydesk]
