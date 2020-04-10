@@ -40,6 +40,10 @@ gsettings set org.gnome.mutter experimental-features '["rt-scheduler"]'
 
 gsettings set org.gnome.mutter experimental-features "['rt-scheduler' , 'scale-monitor-framebuffer']"
 
+gnome-extensions enable dash-to-dock@micxgx.gmail.com
+gnome-extensions enable TopIcons@phocean.net
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+
 gsettings set org.gnome.shell enabled-extensions "['user-theme@gnome-shell-extensions.gcampax.github.com', 'TopIcons@phocean.net', 'dash-to-dock@micxgx.gmail.com']"
 
 gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
