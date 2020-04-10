@@ -58,11 +58,7 @@ sudo grubby --update-kernel=ALL --remove-args="quiet"
 sudo grubby --update-kernel=ALL --args="intel_iommu=on mitigations=off quiet"
 sudo grubby --info=ALL
 
-gsettings set org.gnome.shell.app-switcher current-workspace-only 'true'
-gsettings set org.gnome.mutter workspaces-only-on-primary 'false'
-gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
-
-wget -c https://download3.vmware.com/software/view/viewclients/CART21FQ1/VMware-Horizon-Client-5.4.0-15805449.x64.bundle -P ~/Downloads/
+wget -c https://download3.vmware.com/software/view/viewclients/CART21FQ1/VMware-Horizon-Client-5.4.1-15988340.x64.bundle -P ~/Downloads/
 
 # Check versions
 
@@ -83,7 +79,7 @@ ls -al /usr/lib64/lib{udev,ffi,gstapp,gstbase,gstreamer}*.so*
 # Install VMware Horizon Client
 
 sudo env TERM=dumb VMWARE_EULAS_AGREED=yes \
-bash ~/Downloads/VMware-Horizon-Client-5.4.0-15805449.x64.bundle --console \
+bash ~/Downloads/VMware-Horizon-Client-5.4.1-15988340.x64.bundle --console \
 --set-setting vmware-horizon-html5mmr html5mmrEnable no \
 --set-setting vmware-horizon-integrated-printing vmipEnable no \
 --set-setting vmware-horizon-media-provider mediaproviderEnable no \
