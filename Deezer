@@ -23,8 +23,8 @@ rm -r resources/{app,npm_temp} || true
 
 asar extract resources/app.asar resources/app
 
-mkdir -p app/resources/linux/
-cp win/systray.png app/resources/linux/systray.png
+mkdir -p resources/app/resources/linux/
+cp resources/win/systray.png resources/app/resources/linux/systray.png
 
 # Remove NodeRT from package (-205.72 MiB)
 rm -r resources/app/node_modules/@nodert
