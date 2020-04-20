@@ -47,7 +47,7 @@ sudo mkdir -p /usr/share/deezer
 sudo mkdir -p /usr/lib/node_modules/share/
 sudo ln -sf /usr/share/deezer/ /usr/lib/node_modules/share/
 
-tee -a deezer <<-EOF
+tee deezer <<-EOF
 #!/bin/sh
 export DZ_DISABLE_UPDATE="yes"
 exec electron --disable-gpu /usr/share/deezer/app.asar "\$@"
