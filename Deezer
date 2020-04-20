@@ -34,9 +34,7 @@ cd ..
 prettier --write resources/app/"build/*.js"
 prettier --write resources/app/"build/assets/cache/js/route-naboo*ads*.js"
 
-patch -dresources/app/ -p1 < systray.patch
 patch -dresources/app/ -p1 < menu-bar.patch
-patch -dresources/app/ -p1 < nav-buttons.patch
 patch -dresources/app/ -p1 < quit.patch
 patch -dresources/app/ -p1 < 0001-MPRIS-interface.patch
 
@@ -48,11 +46,17 @@ sudo ln -sf /usr/share/deezer/ /usr/lib/node_modules/share/
 
 tee -a deezer <<-EOF
 #!/bin/sh
-exec electron /usr/share/deezer/app.asar "\$@"
+export DZ_DISABLE_UPDATE="yes"
+exec electron --disable-gpu /usr/share/deezer/app.asar "\$@"
 EOF
 
 sudo install -Dm644 resources/app.asar /usr/share/deezer/
-sudo install -Dm644 resources/win/deezer.png /usr/share/icons/hicolor/256x256/apps/
+sudo install -Dm644 resources/win/deezer-0.png /usr/share/icons/hicolor/16x16/apps/deezer.png
+sudo install -Dm644 resources/win/deezer-1.png /usr/share/icons/hicolor/32x32/apps/deezer.png
+sudo install -Dm644 resources/win/deezer-2.png /usr/share/icons/hicolor/48x48/apps/deezer.png
+sudo install -Dm644 resources/win/deezer-3.png /usr/share/icons/hicolor/64x64/apps/deezer.png
+sudo install -Dm644 resources/win/deezer-4.png /usr/share/icons/hicolor/128x128/apps/deezer.png
+sudo install -Dm644 resources/win/deezer-5.png /usr/share/icons/hicolor/256x256/apps/deezer.png
 sudo install -Dm644 resources/win/systray.png /usr/share/deezer/
 sed -i 's|/usr/bin/deezer %u|env XDG_CURRENT_DESKTOP=GNOME &|' deezer.desktop
 sudo install -Dm644 deezer.desktop /usr/share/applications/
