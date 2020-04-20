@@ -57,7 +57,6 @@ sudo install -Dm644 resources/win/deezer-2.png /usr/share/icons/hicolor/48x48/ap
 sudo install -Dm644 resources/win/deezer-3.png /usr/share/icons/hicolor/64x64/apps/deezer.png
 sudo install -Dm644 resources/win/deezer-4.png /usr/share/icons/hicolor/128x128/apps/deezer.png
 sudo install -Dm644 resources/win/deezer-5.png /usr/share/icons/hicolor/256x256/apps/deezer.png
-sudo install -Dm644 resources/win/systray.png /usr/share/deezer/
 sed -i 's|/usr/bin/deezer %u|env XDG_CURRENT_DESKTOP=GNOME &|' deezer.desktop
 sudo install -Dm644 deezer.desktop /usr/share/applications/
 sudo install -Dm755 deezer /usr/bin/
