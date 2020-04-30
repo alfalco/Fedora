@@ -67,7 +67,7 @@ ls -alt /usr/lib64/lib{udev,ffi,gstapp,gstbase,gstreamer}*.so*
 # Make symbolic links
 
 cd /usr/lib64
-sudo ln -s libudev.so.1.6.15 libudev.so.0
+sudo ln -s libudev.so.1.6.17 libudev.so.0
 sudo ln -s libgstapp-1.0.so.0.1602.0 libgstapp-0.10.so.0
 sudo ln -s libgstbase-1.0.so.0.1602.0 libgstbase-0.10.so.0
 sudo ln -s libgstreamer-1.0.so.0.1602.0 libgstreamer-0.10.so.0
