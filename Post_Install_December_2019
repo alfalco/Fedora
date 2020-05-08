@@ -20,7 +20,7 @@ sudo dnf install lame\* --exclude=lame-devel
 
 sudo dnf group upgrade --with-optional Multimedia
 
-sudo dnf install @multimedia compat-ffmpeg28 libmad live555 ffmpeg libva-utils pulseeffects youtube-dl gstreamer1-vaapi libva-utils
+sudo dnf install @multimedia compat-ffmpeg28 libmad live555 ffmpeg libva-utils pulseeffects youtube-dl gstreamer1-vaapi libva-utils pavucontrol
 
 sudo dnf copr enable zawertun/hack-fonts
 
