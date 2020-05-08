@@ -105,6 +105,12 @@ for d in Arc{,-Dark,-Darker,-Lighter}; do
   [ -d ~/.local/share/themes/$d ] && ln -s ~/.local/share/themes/$d ~/.themes/;
 done
 
+tee -a .bashrc <<-EOF
+
+# Enforce X11/XWayland for Qt Apps
+export QT_QPA_PLATFORM="xcb"
+EOF
+
 sudo systemctl disable --now abrt-journal-core.service abrt-oops.service abrt-xorg.service abrtd.service
 
 sudo systemctl disable --now dnf-makecache.timer
