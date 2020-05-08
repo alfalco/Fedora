@@ -6,15 +6,13 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 
 sudo dnf --best --allowerasing --refresh upgrade
 
-sudo dnf install patch p7zip-plugins gcc-c++ npm ImageMagick irqbalance lm_sensors htop vim-enhanced fuse-exfat exfat-utils python3-dnf-plugin-tracer python3-dnf-plugin-versionlock icedtea-web nmap pv unrar sysfsutils iptraf-ng nethogs dnstop ncdu gnome-tweaks screenfetch neofetch smartmontools bonnie++ fio hdparm util-linux-user finger liberation-fonts google-noto-serif-fonts gtkmm24 libpng12 python2 pygtk2 telegram-desktop gnome-shell-extension-dash-to-dock gnome-shell-extension-topicons-plus xorg-x11-drv-amdgpu remmina most smem sysstat collectl asciinema
+sudo dnf install patch p7zip-plugins gcc-c++ npm ImageMagick irqbalance lm_sensors htop vim-enhanced fuse-exfat exfat-utils python3-dnf-plugin-tracer python3-dnf-plugin-versionlock icedtea-web nmap pv unrar sysfsutils iptraf-ng nethogs dnstop ncdu gnome-tweaks screenfetch neofetch smartmontools bonnie++ fio hdparm util-linux-user finger liberation-fonts google-noto-serif-fonts gtkmm24 libpng12 python2 pygtk2 telegram-desktop gnome-shell-extension-dash-to-dock gnome-shell-extension-topicons-plus xorg-x11-drv-amdgpu remmina most smem sysstat collectl asciinema nmon expect
 
 sudo dnf install @virtualization tuned tuned-utils ksmtuned cockpit cockpit-machines
 
 sudo usermod -a -G libvirt $USER
 
-sudo systemctl enable --now cockpit.socket
-
-sudo systemctl enable --now sshd
+sudo systemctl enable --now cockpit.socket sshd.service sysstat.service
 
 sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 
@@ -72,7 +70,7 @@ sudo ln -s libgstreamer-1.0.so.0.1602.0 libgstreamer-0.10.so.0
 
 # Check symbolic links
 
-ls -al /usr/lib64/lib{udev,ffi,gstapp,gstbase,gstreamer}*.so*
+unbuffer ls --color=auto -alt /usr/lib64/lib{udev,ffi,gstapp,gstbase,gstreamer}*.so* | head -4
 
 # Install VMware Horizon Client
 
@@ -94,15 +92,18 @@ sudo update-desktop-database
 
 # Arc Theme
 
-sudo dnf install autoconf automake make sassc optipng inkscape-0.92.4-8.fc31 gtk3-devel gtk-murrine-engine
+sudo dnf install autoconf automake make sassc optipng inkscape gtk3-devel gtk-murrine-engine
 
-sudo dnf versionlock add inkscape-0.92.4-8.fc31
+cd ~/Downloads; git clone https://github.com/jnsh/arc-theme --depth 1; cd arc-theme
 
-cd ~/Downloads; git clone https://github.com/arc-design/arc-theme --depth 1; cd arc-theme
+./autogen.sh --prefix=$HOME/.local --disable-cinnamon --disable-metacity --disable-openbox --disable-plank --disable-unity --disable-xfwm
 
-./autogen.sh --prefix=/usr
+make install
 
-sudo make install
+mkdir -p ~/.themes/
+for d in Arc{,-Dark,-Darker,-Lighter}; do
+  [ -d ~/.local/share/themes/$d ] && ln -s ~/.local/share/themes/$d ~/.themes/;
+done
 
 sudo systemctl disable --now abrt-journal-core.service abrt-oops.service abrt-xorg.service abrtd.service
 
