@@ -39,6 +39,8 @@ gsettings set org.gnome.desktop.peripherals.mouse speed 0.25
 
 gsettings set org.gnome.mutter experimental-features '["rt-scheduler"]'
 
+sudo setcap CAP_SYS_NICE=+ep /usr/bin/gnome-shell
+
 gsettings set org.gnome.mutter experimental-features "['rt-scheduler' , 'scale-monitor-framebuffer']"
 
 gnome-extensions enable dash-to-dock@micxgx.gmail.com
