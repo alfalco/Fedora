@@ -90,6 +90,13 @@ bash ~/Downloads/VMware-Horizon-Client-5.4.1-15988340.x64.bundle --console \
 
 sudo update-desktop-database
 
+sudo dnf install compat-openssl10
+sudo ln -s /usr/lib64/libssl.so.1.0.2o /usr/lib64/libssl.so.1.0.2
+sudo ln -s /usr/lib64/libcrypto.so.1.0.2o /usr/lib64/libcrypto.so.1.0.2
+sudo ln -s /usr/lib/vmware/libcrtbora.so /usr/lib64/libcrtbora.so
+sudo ln -s /usr/lib/vmware/libvmwarebase.so /usr/lib64/libvmwarebase.so
+sudo ldd /usr/lib/vmware/view/bin/vmware-view
+
 # Arc Theme
 
 sudo dnf install autoconf automake make sassc optipng inkscape gtk3-devel gtk-murrine-engine
