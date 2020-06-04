@@ -128,6 +128,19 @@ sudo tee -a /etc/profile.d/most.sh <<-EOF
 export PAGER="/usr/bin/most -s"
 EOF
 
+tee -a .bashrc <<-EOF
+
+#less Colors
+
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+EOF
+
 sudo tee -a /etc/yum.repos.d/AnyDesk-Fedora.repo <<-EOF
 [anydesk]
 name=AnyDesk Fedora - stable
