@@ -105,12 +105,12 @@ cd ~/Downloads; git clone https://github.com/jnsh/arc-theme --depth 1; cd arc-th
 
 ./autogen.sh --prefix=$HOME/.local --disable-cinnamon --disable-metacity --disable-openbox --disable-plank --disable-unity --disable-xfwm
 
-make install
-
 mkdir -p ~/.themes/
 for d in Arc{,-Dark,-Darker,-Lighter}; do
   [ -d ~/.local/share/themes/$d ] && ln -s ~/.local/share/themes/$d ~/.themes/;
 done
+
+make -j$(nproc) install
 
 tee -a .bashrc <<-EOF
 
