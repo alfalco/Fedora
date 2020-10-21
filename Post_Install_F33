@@ -6,7 +6,7 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 
 sudo dnf --best --allowerasing --refresh upgrade
 
-sudo dnf install patch p7zip-plugins gcc-c++ npm ImageMagick irqbalance lm_sensors htop vim-enhanced fuse-exfat exfat-utils python3-dnf-plugin-tracer python3-dnf-plugin-versionlock icedtea-web nmap pv unrar sysfsutils iptraf-ng nethogs dnstop ncdu gnome-tweaks screenfetch neofetch smartmontools bonnie++ fio hdparm util-linux-user finger liberation-fonts google-noto-serif-fonts gtkmm24 libpng12 python2 pygtk2 telegram-desktop gnome-shell-extension-dash-to-dock gnome-shell-extension-topicons-plus xorg-x11-drv-amdgpu remmina most smem sysstat collectl asciinema nmon expect gnome-extensions-app netdata glances radeontop strace
+sudo dnf install patch p7zip-plugins gcc-c++ ImageMagick irqbalance lm_sensors htop vim-enhanced fuse-exfat exfat-utils python3-dnf-plugin-tracer python3-dnf-plugin-versionlock icedtea-web nmap pv unrar sysfsutils iptraf-ng nethogs dnstop ncdu gnome-tweaks screenfetch neofetch smartmontools bonnie++ fio hdparm util-linux-user finger liberation-fonts google-noto-serif-fonts gtkmm24 libpng12 python2 pygtk2 telegram-desktop gnome-shell-extension-dash-to-dock gnome-shell-extension-topicons-plus remmina most smem sysstat collectl asciinema nmon expect gnome-extensions-app netdata glances radeontop strace
 
 sudo dnf install @virtualization tuned tuned-utils ksmtuned cockpit cockpit-machines
 
@@ -54,7 +54,7 @@ sudo grubby --update-kernel=ALL --remove-args="quiet"
 sudo grubby --update-kernel=ALL --args="intel_iommu=on mitigations=off quiet"
 sudo grubby --info=ALL
 
-wget -c https://download3.vmware.com/software/view/viewclients/CART21FQ1/VMware-Horizon-Client-5.4.1-15988340.x64.bundle -P ~/Downloads/
+wget -c https://download3.vmware.com/software/view/viewclients/CART21FQ2/VMware-Horizon-Client-2006-8.0.0-16522670.x64.bundle -P ~/Downloads/
 
 # Check versions
 
@@ -63,10 +63,10 @@ ls -alt /usr/lib64/lib{udev,ffi,gstapp,gstbase,gstreamer}*.so*
 # Make symbolic links
 
 cd /usr/lib64
-sudo ln -s libudev.so.1.6.17 libudev.so.0
-sudo ln -s libgstapp-1.0.so.0.1602.0 libgstapp-0.10.so.0
-sudo ln -s libgstbase-1.0.so.0.1602.0 libgstbase-0.10.so.0
-sudo ln -s libgstreamer-1.0.so.0.1602.0 libgstreamer-0.10.so.0
+sudo ln -s libudev.so.1.6.18 libudev.so.0
+sudo ln -s libgstapp-1.0.so.0.1800.0 libgstapp-0.10.so.0
+sudo ln -s libgstbase-1.0.so.0.1800.0 libgstbase-0.10.so.0
+sudo ln -s libgstreamer-1.0.so.0.1800.0 libgstreamer-0.10.so.0
 
 # Check symbolic links
 
@@ -75,7 +75,7 @@ unbuffer ls --color=auto -alt /usr/lib64/lib{udev,ffi,gstapp,gstbase,gstreamer}*
 # Install VMware Horizon Client
 
 sudo env TERM=dumb VMWARE_EULAS_AGREED=yes \
-bash ~/Downloads/VMware-Horizon-Client-5.4.1-15988340.x64.bundle --console \
+bash ~/Downloads/VMware-Horizon-Client-2006-8.0.0-16522670.x64.bundle --console \
 --set-setting vmware-horizon-html5mmr html5mmrEnable no \
 --set-setting vmware-horizon-integrated-printing vmipEnable no \
 --set-setting vmware-horizon-media-provider mediaproviderEnable no \
@@ -103,7 +103,7 @@ sudo dnf install autoconf automake make sassc optipng inkscape gtk3-devel gtk-mu
 
 cd ~/Downloads; git clone https://github.com/jnsh/arc-theme --depth 1; cd arc-theme
 
-./autogen.sh --prefix=$HOME/.local --disable-cinnamon --disable-metacity --disable-openbox --disable-plank --disable-unity --disable-xfwm
+./autogen.sh --prefix=$HOME/.local --disable-cinnamon --disable-metacity --disable-plank --disable-unity --disable-xfwm
 
 mkdir -p ~/.themes/
 for d in Arc{,-Dark,-Darker,-Lighter}; do
