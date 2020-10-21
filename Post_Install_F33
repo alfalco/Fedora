@@ -103,6 +103,8 @@ sudo dnf install autoconf automake make sassc optipng inkscape gtk3-devel gtk-mu
 
 cd ~/Downloads; git clone https://github.com/jnsh/arc-theme --depth 1; cd arc-theme
 
+vi common/gnome-shell/3.38/sass/_common.scss # change $font-size to 9;
+
 ./autogen.sh --prefix=$HOME/.local --disable-cinnamon --disable-metacity --disable-plank --disable-unity --disable-xfwm
 
 mkdir -p ~/.themes/
