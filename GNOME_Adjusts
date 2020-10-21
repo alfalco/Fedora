@@ -119,3 +119,24 @@ gsettings set org.gnome.shell.extensions.topicons icon-spacing '10'
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+
+#Adjusts - 21/10/2020
+
+gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
+gsettings set org.gnome.mutter experimental-features '["rt-scheduler"]'
+sudo setcap CAP_SYS_NICE=+ep /usr/bin/gnome-shell
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+gsettings set org.gnome.shell.extensions.user-theme name 'Arc-Dark'
+gsettings set org.gnome.desktop.interface document-font-name 'Cantarell 9'
+gsettings set org.gnome.desktop.interface font-name 'Cantarell 9'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Source Code Pro 9'
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Cantarell Bold 9'
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ use-system-font false
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ font 'Hack Regular 9'
+gsettings set org.gnome.shell.extensions.topicons icon-opacity '255'
+gsettings set org.gnome.shell.extensions.topicons icon-size '20'
+gsettings set org.gnome.shell.extensions.topicons tray-pos 'right'
+gsettings set org.gnome.shell.extensions.topicons icon-spacing '10'
+gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
+gsettings set org.gnome.desktop.wm.preferences theme 'Arc-Dark'
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
