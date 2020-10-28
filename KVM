@@ -11,8 +11,8 @@ gsettings set org.virt-manager.virt-manager.vmlist-fields memory-usage true
 gsettings set org.virt-manager.virt-manager.vmlist-fields disk-usage true
 gsettings set org.virt-manager.virt-manager.vmlist-fields network-traffic true
 
-gsettings set org.virt-manager.virt-manager.console resize-guest -1
-gsettings set org.virt-manager.virt-manager.console scaling 1
+gsettings set org.virt-manager.virt-manager.console resize-guest 1
+gsettings set org.virt-manager.virt-manager.console scaling 2
 
 gsettings set org.virt-manager.virt-manager xmleditor-enabled true
 
