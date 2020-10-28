@@ -1,1 +1,26 @@
 https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/
+
+# Virt Manager
+
+org.virt-manager.virt-manager.stats enable-net-poll true
+org.virt-manager.virt-manager.stats enable-memory-poll true
+org.virt-manager.virt-manager.stats enable-disk-poll true
+
+org.virt-manager.virt-manager.vmlist-fields host-cpu-usage true
+org.virt-manager.virt-manager.vmlist-fields memory-usage true
+org.virt-manager.virt-manager.vmlist-fields disk-usage true
+org.virt-manager.virt-manager.vmlist-fields network-traffic true
+
+org.virt-manager.virt-manager.console resize-guest -1
+org.virt-manager.virt-manager.console scaling 1
+
+org.virt-manager.virt-manager xmleditor-enabled true
+
+org.virt-manager.virt-manager.new-vm storage-format 'default'
+org.virt-manager.virt-manager.new-vm cpu-default 'default'
+org.virt-manager.virt-manager.new-vm graphics-type 'system'
+
+org.virt-manager.virt-manager.paths screenshot-default ''
+org.virt-manager.virt-manager.paths perms-fix-ignore ['/home/alfalco']
+org.virt-manager.virt-manager.paths media-default '/home/alfalco/Downloads'
+org.virt-manager.virt-manager.paths image-default ''
