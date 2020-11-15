@@ -31,3 +31,11 @@ $ gsettings set org.gnome.mutter workspaces-only-on-primary false
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 sudo dnf install irqbalance lm_sensors htop vim-enhanced telegram-desktop fuse-exfat exfat-utils python3-dnf-plugin-tracer icedtea-web nmap pv gstreamer1-libav gstreamer1-plugins-ugly unrar compat-ffmpeg28 sysfsutils iptraf-ng nethogs mtr dnstop ncdu initscripts fedora-user-agent-chrome papirus-icon-theme
+
+# Fedora 33 Minimal - Installed with Everything ISO
+
+# Lenovo T430
+
+sudo dnf config-manager --setopt=install_weak_deps="False" --save
+
+sudo dnf install bash-completion gdm gnome-desktop gnome-menus gnome-shell gnome-terminal dejavu-sans-mono-fonts dejavu-serif-fonts liberation-fonts lm_sensors google-noto-sans-fonts google-noto-serif-fonts microcode_ctl nautilus nautilus-sendto NetworkManager-wifi desktop-backgrounds-gnome chrome-gnome-shell xdg-user-dirs-gtk xdg-utils neofetch firefox tmux selinux-policy-minimum selinux-policy-mls zip unzip iwl6000g2a-firmware
