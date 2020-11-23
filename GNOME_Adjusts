@@ -122,6 +122,8 @@ gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 
 #Adjusts - 21/10/2020
 
+gsettings reset org.gnome.shell app-picker-layout
+
 gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
 gsettings set org.gnome.mutter experimental-features '["rt-scheduler"]'
 sudo setcap CAP_SYS_NICE=+ep /usr/bin/gnome-shell
