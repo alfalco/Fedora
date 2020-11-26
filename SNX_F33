@@ -1,4 +1,4 @@
-### Necessary steps to install Check Poin SNX on Fedora 33 (it was also tested on Fedora 32 and worked perfectly on both)
+### Necessary steps to install Check Point SNX on Fedora 33 (it was also tested on Fedora 32 and worked perfectly on both)
 ### https://gist.github.com/rkueny/301f7ead21ed2a0ee8bbe2d755bed90b
 
 #First, install dependencies:
