@@ -19,6 +19,16 @@ $ sudo chmod +x snx_install_linux30_800010003.sh; sudo ./snx_install_linux30_800
 $ sudo ldd $(which snx)
 $ snx ver
 
+#Basic use of snx
+
+- Connection:
+
+$ snx -s server.url.net -u alfalco
+
+- Disconnect:
+
+$ snx -d
+
 #Bonus
 #Check which packages have installed libraries
 
