@@ -30,6 +30,16 @@ $ snx -s server.url.net -u alfalco
 
 $ snx -d
 
+#Using snx config file, .snxrc:
+
+tee -a ~/.snxrc <<-EOF
+server server.url.net
+username alfalco
+reauth yes
+EOF
+
+$ snx
+
 #Bonus
 #Check which packages have installed libraries
 
