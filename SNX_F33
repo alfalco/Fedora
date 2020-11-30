@@ -6,6 +6,10 @@
 $ sudo dnf install tar bzip2 wget elfutils-libelf.i686 libX11.i686 libaudit.so.1 libcrack.so.2 libdb-5.3.so libselinux.so.1 libnsl.so.1 libpam.so.0
 $ sudo dnf install https://kojipkgs.fedoraproject.org//vol/fedora_koji_archive01/packages/compat-gcc-32/3.2.3/68.16.fc26.1/i686/compat-libstdc++-33-3.2.3-68.16.fc26.1.i686.rpm
 
+or
+
+$ sudo dnf --disablerepo fedora-modular,updates-modular --releasever=30 install compat-libstdc++-33.i686
+
 #Download snx (version 800010003) installation script directly from Check Point:
 #https://supportcenter.checkpoint.com/supportcenter/portal/user/anon/page/default.psml/media-type/html?action=portlets.DCFileAction&eventSubmit_doGetdcdetails=&fileid=22824
 
