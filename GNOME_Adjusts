@@ -129,6 +129,8 @@ gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
 gsettings set org.gnome.mutter experimental-features '["rt-scheduler"]'
 sudo setcap CAP_SYS_NICE=+ep /usr/bin/gnome-shell
 
+gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
+
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
 gsettings set org.gnome.shell.extensions.user-theme name 'Arc-Dark'
