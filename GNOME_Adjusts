@@ -154,3 +154,9 @@ gsettings set org.gnome.shell.extensions.topicons tray-pos 'right'
 gsettings set org.gnome.shell.extensions.topicons icon-spacing '10'
 
 gnome-extensions enable dash-to-dock@micxgx.gmail.com
+
+#GNOME Terminal Colors - https://mayccoll.github.io/Gogh/
+
+# Dracula (36) - Oceanic Next (122) - One Dark (125) - Pro (140) #
+
+bash -c  "$(wget -qO- https://git.io/vQgMr)"
