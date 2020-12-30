@@ -20,3 +20,5 @@ sudo systemctl mask dnf-makecache.timer
 # Fedora Minimal aarch64
 sudo growpart /dev/mmcblk0 3
 sudo resize2fs /dev/mmcblk0p3
+
+https://www.reddit.com/r/raspberry_pi/comments/aki1is/reducing_power_of_the_raspberry_pi_3_b/
