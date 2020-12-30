@@ -16,3 +16,7 @@ sudo dnf config-manager --set-disabled fedora-modular updates-modular
 
 sudo systemctl disable dnf-makecache.timer 
 sudo systemctl mask dnf-makecache.timer
+
+# Fedora Minimal aarch64
+sudo growpart /dev/mmcblk0 3
+sudo resize2fs /dev/mmcblk0p3
