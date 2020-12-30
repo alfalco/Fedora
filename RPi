@@ -9,3 +9,8 @@ sudo dnf config-manager --save --setopt=deltarpm=false
 https://www.ctrl.blog/entry/rpi-fedora.html
 
 https://nullr0ute.com/2020/08/three-ways-to-speed-up-dnf-on-arm-devices/
+
+sudo systemctl disable dnf-makecache.timer 
+sudo systemctl mask dnf-makecache.timer
+
+sudo dnf config-manager --set-disabled fedora-modular updates-modular
