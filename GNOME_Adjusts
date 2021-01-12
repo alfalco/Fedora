@@ -127,6 +127,11 @@ gsettings reset org.gnome.shell app-picker-layout
 gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
 
 gsettings set org.gnome.mutter experimental-features '["rt-scheduler"]'
+
+#Lenovo ThinkPad W540 3K display
+
+gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+
 sudo setcap CAP_SYS_NICE=+ep /usr/bin/gnome-shell
 
 #https://technologytales.com/2020/07/25/restoring-the-menu-bar-on-gnome-terminal-in-a-gnome-shell-session/
