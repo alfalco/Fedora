@@ -54,7 +54,7 @@ sudo grubby --update-kernel=ALL --remove-args="quiet"
 sudo grubby --update-kernel=ALL --args="intel_iommu=on mitigations=off quiet"
 sudo grubby --info=ALL
 
-wget -c https://download3.vmware.com/software/view/viewclients/CART21FQ2/VMware-Horizon-Client-2006-8.0.0-16522670.x64.bundle -P ~/Downloads/
+wget -c https://download3.vmware.com/software/view/viewclients/CART21FQ4/VMware-Horizon-Client-2012-8.1.0-17349998.x64.bundle -P ~/Downloads/
 
 # Check versions
 
@@ -75,7 +75,7 @@ unbuffer ls --color=auto -alt /usr/lib64/lib{udev,ffi,gstapp,gstbase,gstreamer}*
 # Install VMware Horizon Client
 
 sudo env TERM=dumb VMWARE_EULAS_AGREED=yes \
-bash ~/Downloads/VMware-Horizon-Client-2006-8.0.0-16522670.x64.bundle --console \
+bash ~/Downloads/VMware-Horizon-Client-2012-8.1.0-17349998.x64.bundle --console \
 --set-setting vmware-horizon-html5mmr html5mmrEnable no \
 --set-setting vmware-horizon-integrated-printing vmipEnable no \
 --set-setting vmware-horizon-media-provider mediaproviderEnable no \
