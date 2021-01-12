@@ -164,6 +164,13 @@ gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Cantarell Bold 10'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ use-system-font false
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ font 'Hack Regular 10'
 
+#gsettings set org.gnome.desktop.interface text-scaling-factor 1.6
+
+gsettings get org.gnome.desktop.interface text-scaling-factor
+gsettings set org.gnome.desktop.interface text-scaling-factor 0.9
+gsettings reset org.gnome.desktop.interface text-scaling-factor
+gsettings get org.gnome.desktop.interface text-scaling-factor
+
 gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
 gsettings set org.gnome.desktop.wm.preferences theme 'Arc-Dark'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
