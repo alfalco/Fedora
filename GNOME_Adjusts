@@ -129,12 +129,13 @@ gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
 gsettings set org.gnome.mutter experimental-features '["rt-scheduler"]'
 sudo setcap CAP_SYS_NICE=+ep /usr/bin/gnome-shell
 
-gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
+#https://technologytales.com/2020/07/25/restoring-the-menu-bar-on-gnome-terminal-in-a-gnome-shell-session/
 
-GSETTINGS_SCHEMA=org.gnome.Terminal.Legacy.Keybindings
-GSETTINGS_PATH=/org/gnome/terminal/legacy/keybindings/
-SCHEMA_PATH=$GSETTINGS_SCHEMA:$GSETTINGS_PATH
-gsettings set $SCHEMA_PATH toggle-menubar 'enabled'
+gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
+
+#https://gitlab.gnome.org/GNOME/gnome-terminal/-/issues/40
+
+gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
 
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
