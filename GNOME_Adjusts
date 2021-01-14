@@ -185,6 +185,6 @@ gnome-extensions enable dash-to-dock@micxgx.gmail.com
 
 #GNOME Terminal Colors - https://mayccoll.github.io/Gogh/
 
-# Dracula (36) - Oceanic Next (122) - One Dark (125) - Pro (140) #
+# Afterglow (06) - Dracula (36) - Oceanic Next (122) - One Dark (125) - Pro (142) - Tin (179) #
 
 bash -c  "$(wget -qO- https://git.io/vQgMr)"
