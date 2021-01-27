@@ -98,7 +98,7 @@ sudo ldd /usr/lib/vmware/view/bin/vmware-view
 
 # Arc Theme
 
-sudo dnf install autoconf automake make sassc optipng inkscape glib2-devel gtk3-devel gtk-murrine-engine gnome-themes-extra
+sudo dnf install autoconf automake make sassc optipng inkscape glib2-devel gtk2-devel gtk3-devel gtk-murrine-engine gnome-themes-extra
 
 #New build with meson
 
