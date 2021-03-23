@@ -56,6 +56,8 @@ sudo grubby --info=ALL
 
 wget -c https://download3.vmware.com/software/view/viewclients/CART21FQ4/VMware-Horizon-Client-2012-8.1.0-17349998.x64.bundle -P ~/Downloads/
 
+wget -c https://download3.vmware.com/software/view/viewclients/CART22FQ1/VMware-Horizon-Client-2103-8.2.0-17742757.x64.bundle -P ~/Downloads/
+
 # Check versions
 
 ls -alt /usr/lib64/lib{udev,ffi,gstapp,gstbase,gstreamer}*.so*
