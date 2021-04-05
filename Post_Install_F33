@@ -127,7 +127,9 @@ cd ~/Downloads; git clone https://github.com/jnsh/arc-theme --depth 1; cd arc-th
 
 sed -i 's/$font-size: 11;/$font-size: 10;/g' common/gnome-shell/3.38/sass/_common.scss
 
-meson setup --prefix=$HOME/.local -Dvariants=dark -Dthemes=gnome-shell,gtk2,gtk3,metacity -Dtransparency=true build/
+sed -i 's/$font-size: 11;/$font-size: 10;/g' common/gnome-shell/40/sass/_common.scss
+
+meson setup --prefix=$HOME/.local -D variants=dark -D themes=gnome-shell,gtk2,gtk3,metacity -D transparency=true -D gnome_shell_gresource=true build/
 
 mkdir -p ~/.themes/
 for d in Arc{,-Dark,-Darker,-Lighter}; do
