@@ -1,3 +1,13 @@
+https://fedoraproject.org/wiki/Architectures/ARM/Raspberry_Pi
+
+https://alt.fedoraproject.org/alt/
+
+https://download.fedoraproject.org/pub/fedora/linux/releases/35/Server/aarch64/images/Fedora-Server-35-1.2.aarch64.raw.xz
+
+https://download.fedoraproject.org/pub/fedora-secondary/releases/35/Spins/aarch64/images/Fedora-Minimal-35-1.2.aarch64.raw.xz
+
+sudo arm-image-installer --image=/home/alfalco/Downloads/Fedora-Minimal-35-1.2.aarch64.raw.xz --target=rpi3 --media=/dev/mmcblk0
+
 https://leo3418.github.io/2020/07/27/compile-vcgencmd-on-fedora.html
 
 https://copr.fedorainfracloud.org/coprs/leo3418/raspberrypi-userland/
