@@ -8,6 +8,12 @@ https://download.fedoraproject.org/pub/fedora-secondary/releases/35/Spins/aarch6
 
 sudo arm-image-installer --image=/home/alfalco/Downloads/Fedora-Minimal-35-1.2.aarch64.raw.xz --target=rpi3 --media=/dev/mmcblk0
 
+sudo arm-image-installer --image=/home/alfalco/Downloads/Fedora-Server-35-1.2.aarch64.raw.xz --target=rpi3 --media=/dev/mmcblk0
+
+https://raduzaharia.medium.com/initial-fedora-server-35-configuration-on-a-raspberry-pi-d317d462e2e8
+
+https://raduzaharia.medium.com/adding-an-external-ssd-to-your-fedora-server-on-a-raspberry-pi-e60daaba438b
+
 https://leo3418.github.io/2020/07/27/compile-vcgencmd-on-fedora.html
 
 https://copr.fedorainfracloud.org/coprs/leo3418/raspberrypi-userland/
