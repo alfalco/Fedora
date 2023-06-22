@@ -1,23 +1,36 @@
 ### Necessary steps to install Check Point SNX on Fedora 33 (it was also tested on Fedora 32 and worked perfectly on both)
 ### https://gist.github.com/rkueny/301f7ead21ed2a0ee8bbe2d755bed90b
 
+### https://l8group.freshdesk.com/support/solutions/articles/1000311472-vpn-client-via-linha-de-comando-no-linux
+
 #First, install dependencies:
 
-$ sudo dnf install tar bzip2 wget elfutils-libelf.i686 libX11.i686 libaudit.so.1 libcrack.so.2 libdb-5.3.so libselinux.so.1 libnsl.so.1 libpam.so.0
+$ sudo dnf install vim-enhanced expect tar bzip2 wget which bash-completion elfutils-libelf.i686 libX11.i686 libaudit.so.1 libcrack.so.2 libdb-5.3.so libselinux.so.1 libnsl.so.1 libpam.so.0
 $ sudo dnf install https://kojipkgs.fedoraproject.org//vol/fedora_koji_archive01/packages/compat-gcc-32/3.2.3/68.16.fc26.1/i686/compat-libstdc++-33-3.2.3-68.16.fc26.1.i686.rpm
 
 or
 
 $ sudo dnf --disablerepo fedora-modular,updates-modular --releasever=30 install compat-libstdc++-33.i686
+$ sudo dnf --disablerepo=* --enablerepo=fedora,updates --releasever=30 install compat-libstdc++-33.i686
 
 #Download snx (version 800010003) installation script directly from Check Point:
 #https://supportcenter.checkpoint.com/supportcenter/portal/user/anon/page/default.psml/media-type/html?action=portlets.DCFileAction&eventSubmit_doGetdcdetails=&fileid=22824
 
 $ wget "https://dl3.checkpoint.com/paid/72/72c2c91791690927da0586ec873430cf/snx_install_linux30.sh?HashKey=1606410226_fc154a870571831a99712184df39e90f&xtn=.sh" -O snx_install_linux30_800010003.sh
 
+$ wget --content-disposition https://l8group.freshdesk.com/helpdesk/attachments/1120409355 -O snx_install_linux30-sk90240.sh
+
+#Check script + binary
+$ tail -n +80 snx_install_linux30-sk90240.sh  > snx.30
+
+$ tar tf snx.30
+$ tar xf snx.30
+$ ./snx ver
+
 #Make the script executable and install using sudo:
 
 $ sudo chmod +x snx_install_linux30_800010003.sh; sudo ./snx_install_linux30_800010003.sh
+$ sudo chmod +x snx_install_linux30-sk90240.sh; sudo ./snx_install_linux30-sk90240.sh
 
 #Check if all libraries are resolved and execute snx binary to check version:
 
@@ -43,6 +56,16 @@ reauth yes
 EOF
 
 $ snx
+
+#Create a expect script with follow:
+
+#!/usr/bin/expect
+spawn snx
+expect "Please enter your password:"
+send "yourpassword\n";
+interact
+
+#Make it executable before using
 
 #Bonus
 #Check which packages have installed libraries
