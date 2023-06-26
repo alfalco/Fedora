@@ -40,3 +40,17 @@ sudo resize2fs /dev/mmcblk0p3
 https://www.reddit.com/r/raspberry_pi/comments/aki1is/reducing_power_of_the_raspberry_pi_3_b/
 
 https://raspberrytips.com/disable-wifi-raspberry-pi/
+
+# zram swap
+https://forums.fedoraforum.org/showthread.php?325203-Change-zram-compression-algorithm&p=1841765
+
+sudo vim /etc/modules-load.d/zstd.conf
+zstd
+
+sudo mkdir -p /etc/systemd/zram-generator.conf.d/
+sudo vim /etc/systemd/zram-generator.conf.d/zstd.conf
+
+[zram0]
+compression-algorithm = zstd
+
+zramctl --output-all
