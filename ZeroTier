@@ -1,7 +1,0 @@
-curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | gpg2 --import && if z=$(curl -s 'https://install.zerotier.com/' | gpg2); then echo "$z" | sudo bash; fi
-
-sudo zerotier-cli join 93afae5963eff0d0
-
-sudo zerotier-cli listnetworks
-
-https://my.zerotier.com/
