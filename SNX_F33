@@ -3,6 +3,21 @@
 
 ### https://l8group.freshdesk.com/support/solutions/articles/1000311472-vpn-client-via-linha-de-comando-no-linux
 
+#Basic Configuration
+
+sudo dnf check --all ou sudo dnf check all 
+sudo dnf config-manager --save --setopt="deltarpm=False"
+
+sudo systemctl disable --now dnf-makecache.timer 
+sudo systemctl mask dnf-makecache.timer
+
+sudo systemctl daemon-reload
+sudo systemctl reset-failed
+
+sudo dnf install --allowerasing vim-default-editor
+sudo dnf remove nano
+sudo dnf --refresh --best --allowerasing upgrade
+
 #First, install dependencies:
 
 $ sudo dnf install vim-enhanced expect tar bzip2 wget which bash-color-prompt bash-completion elfutils-libelf.i686 libX11.i686 libaudit.so.1 libcrack.so.2 libdb-5.3.so libselinux.so.1 libnsl.so.1 libpam.so.0
