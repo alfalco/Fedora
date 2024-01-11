@@ -75,7 +75,7 @@ $ snx
 #Create a expect script with follow:
 
 #!/usr/bin/expect
-spawn snx
+spawn -ignore HUP /bin/sh -c "snx"
 expect "Please enter your password:"
 send "yourpassword\n";
 interact
