@@ -1,5 +1,5 @@
 # Add Negativo17 repo to system
-sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-spotify.repo
+sudo dnf config-manager addrepo --from-repofile="https://negativo17.org/repos/fedora-spotify.repo"
 
 # Install package
 sudo dnf install spotify-client
